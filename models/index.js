@@ -12,7 +12,7 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize("postgres://dgakmxaa:uGycU1fWPF19cZXz1R3JJ6q0LhfkDwP8@abul.db.elephantsql.com/dgakmxaa", config);
+  sequelize = new Sequelize(congig.url, config);
 }
 
 fs.readdirSync(__dirname)
